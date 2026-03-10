@@ -1,0 +1,15 @@
+/*
+Theme Name: Stan Ventures Homepage
+Theme URI: https://example.com/
+Description: Custom homepage theme for the Stan Ventures assessment.
+Author: Your Name
+Author URI: https://github.com/your-username
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.5
+Requires PHP: 8.0
+Text Domain: stan-ventures
+*/
+
+/* The main styles are in assets/css/main.css and enqueued via functions.php */
+
