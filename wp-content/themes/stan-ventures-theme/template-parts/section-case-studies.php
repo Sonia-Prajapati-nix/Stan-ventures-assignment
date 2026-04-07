@@ -8,16 +8,9 @@ global $stan_case_studies;
 
 <section class="sv-section sv-case-studies" id="case-studies">
     <div class="sv-container">
-        <header class="sv-section__header sv-section__header--row">
-            <div>
-                <p class="sv-eyebrow">Case studies</p>
-                <h2 class="sv-section__title">Proven results across SaaS, e‑commerce, and marketplaces.</h2>
-            </div>
-            <div class="sv-section__header-cta">
-                <button class="sv-btn sv-btn--ghost" type="button">
-                    View all case studies
-                </button>
-            </div>
+        <header class="sv-section__header">
+            <h2 class="sv-section__title">Proven Results</h2>
+            <p class="sv-eyebrow">Data-backed case studies from our partner agencies.</p>
         </header>
 
         <div class="sv-case-studies__grid">
@@ -32,21 +25,28 @@ global $stan_case_studies;
                         />
                     </div>
                     <div class="sv-case-card__body">
-                        <p class="sv-case-card__client">
-                            <?php echo esc_html($case['client']); ?>
-                        </p>
-                        <h3 class="sv-case-card__title">
-                            <?php echo esc_html($case['title']); ?>
-                        </h3>
-                        <p class="sv-case-card__description">
-                            <?php echo esc_html($case['description']); ?>
-                        </p>
-                        <div class="sv-case-card__metric">
-                            <span class="sv-case-card__metric-label">
-                                <?php echo esc_html($case['stat_label']); ?>
-                            </span>
+                        <div class="sv-case-card__copy">
+                            <p class="sv-case-card__client">
+                                <?php echo esc_html($case['client']); ?>
+                            </p>
                             <span class="sv-case-card__metric-value">
                                 <?php echo esc_html($case['stat_value']); ?>
+                            </span>
+                           
+                            <!-- <p class="sv-case-card__description">
+                                <?php echo esc_html($case['description']); ?>
+                            </p> -->
+                        </div>
+                        <div class="sv-case-card__metric">
+                            <!-- <span class="sv-case-card__metric-value">
+                                <?php echo esc_html($case['stat_value']); ?>
+                            </span> -->
+                            
+                            <h3 class="sv-case-card__title">
+                                <?php echo esc_html($case['title']); ?>
+                            </h3>
+                            <span class="sv-case-card__metric-label">
+                                <?php echo esc_html($case['stat_label']); ?>
                             </span>
                         </div>
                     </div>

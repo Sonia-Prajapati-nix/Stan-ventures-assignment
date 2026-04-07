@@ -7,45 +7,82 @@
 
 $stan_services = [
     [
-        'title'       => 'SEO Strategy & Consulting',
-        'description' => 'Data-driven SEO roadmaps tailored to your business goals and search intent.',
-        'icon'        => 'assets/images/icon-seo-strategy.svg',
-    ],
-    [
-        'title'       => 'Content Marketing',
-        'description' => 'High-quality, search-optimized content that drives authority and conversions.',
-        'icon'        => 'assets/images/icon-content.svg',
-    ],
-    [
-        'title'       => 'Technical SEO',
-        'description' => 'Site architecture, performance, and crawlability improvements for sustainable growth.',
-        'icon'        => 'assets/images/icon-technical.svg',
+        'title'       => 'Managed Campaigns',
+        'description' => 'Complete hands-off SEO management. We handle strategy, execution, and reporting while you maintain the client relationship.',
+        'icon'        => 'assets/images/SVG (2).png',
     ],
     [
         'title'       => 'Link Building',
-        'description' => 'White-hat link acquisition from relevant, high-authority domains.',
-        'icon'        => 'assets/images/icon-link-building.svg',
+        'description' => 'High-DR backlinks from real corporate blogs and news sites. No PBNs.',
+        'icon'        => 'assets/images/SVG (3).png',
+    ],
+    [
+        'title'       => 'Content Engine',
+        'description' => 'SEO-optimized articles written by subject matter experts, not just AI.',
+        'icon'        => 'assets/images/SVG (4).png',
+    ],
+    [
+        'title'       => 'Local Presence',
+        'description' => 'GMB optimization, local citations, and review management to capture local intent.',
+        'icon'        => 'assets/images/SVG (1).png',
+    ],
+    [
+        'title'       => 'Technical Audits',
+        'description' => 'Deep dive crawling to identify and fix indexation bloat, canonical issues, and core web vital failures.',
+        'icon'        => 'assets/images/SVG (3).png',
+    ],
+    [
+        'title'       => 'White-Label Dashboards',
+        'description' => 'Give your clients a live view of their growth with your own branded portal.',
+        'icon'        => 'assets/images/SVG (1).png',
+    ],
+];
+
+$stan_process_steps = [
+    [
+        'number' => '01',
+        'title'  => 'Discovery',
+        'description' => 'We analyze your client\'s website, competitors, and goals to build a custom roadmap.',
+    ],
+    [
+        'number' => '02',
+        'title'  => 'Execution',
+        'description' => 'Our team handles everything—content, links, technical fixes—while you take the credit.',
+    ],
+    [
+        'number' => '03',
+        'title'  => 'Scale',
+        'description' => 'Receive white-label reports showing growth, then identify new opportunities to scale.',
     ],
 ];
 
 $stan_case_studies = [
     [
-        'client'        => 'SaaS Platform',
-        'badge'         => 'B2B',
-        'title'         => '300% Organic Traffic Growth in 9 Months',
-        'description'   => 'Rebuilt keyword strategy and technical foundation to unlock long-tail demand.',
-        'stat_label'    => 'Organic sessions',
-        'stat_value'    => '+300%',
-        'image'         => 'assets/images/case-saas.png',
+        'client'        => 'E-commerce Scale',
+        'badge'         => 'E-commerce',
+        'title'         => 'From $50k to $240k Monthly Revenue',
+        'description'   => 'Full-funnel SEO and link building program to compound non-branded revenue.',
+        'stat_label'    => 'Revenue growth',
+        'stat_value'    => '240%',
+        'image'         => 'assets/images/Container.png',
     ],
     [
-        'client'        => 'E‑commerce Brand',
-        'badge'         => 'DTC',
-        'title'         => '2.4x Revenue from Organic Search',
-        'description'   => 'Optimized high-intent landing pages and collection architecture.',
-        'stat_label'    => 'Organic revenue',
-        'stat_value'    => '2.4×',
-        'image'         => 'assets/images/case-ecom.png',
+        'client'        => 'SaaS Domination',
+        'badge'         => 'SaaS',
+        'title'         => 'Ranking #1 for High-Intent Keywords',
+        'description'   => 'Topic cluster strategy and technical cleanup to own critical SaaS terms.',
+        'stat_label'    => 'Organic users',
+        'stat_value'    => '850%',
+        'image'         => 'assets/images/Container (1).png',
+    ],
+    [
+        'client'        => 'Local Enterprise',
+        'badge'         => 'Enterprise',
+        'title'         => 'Expanding footprint across 50 states',
+        'description'   => 'Location page strategy and authority building for multi-location brand.',
+        'stat_label'    => 'Lead volume',
+        'stat_value'    => '125%',
+        'image'         => 'assets/images/Container (2).png',
     ],
 ];
 
@@ -54,56 +91,83 @@ $stan_testimonials = [
         'quote'      => '“The Stan Ventures team feels like an extension of our in‑house marketing org. They own outcomes, not just tasks.”',
         'name'       => 'Alex Johnson',
         'role'       => 'VP Marketing, GrowthSaaS',
-        'avatar'     => 'assets/images/avatar-alex.png',
-        'companyLogo'=> 'assets/images/logo-growthsaas.svg',
+        'avatar'     => 'assets/images/Sarah Jenkins.png',
+        // 'companyLogo'=> 'assets/images/Sarah Jenkins.png',
     ],
     [
         'quote'      => '“They brought clarity to our SEO strategy and turned underperforming content into a reliable acquisition channel.”',
         'name'       => 'Priya Desai',
         'role'       => 'CMO, DTC Collective',
-        'avatar'     => 'assets/images/avatar-priya.png',
-        'companyLogo'=> 'assets/images/logo-dtc.svg',
+        'avatar'     => 'assets/images/David Chen.png',
+        // 'companyLogo'=> 'assets/images/David Chen.png',
     ],
 ];
 
 $stan_comparison = [
-    'columns' => ['In‑House SEO', 'Generic Agency', 'Stan Ventures'],
+    'columns' => ['Stan Ventures', 'FATJOE'],
     'rows'    => [
         [
-            'label'   => 'Ownership of outcomes',
-            'values'  => ['Medium', 'Low', 'Very high'],
-            'highlightIndex' => 2,
+            'label'   => 'White-Label Dashboard',
+            'values'  => ['yes', 'no'],
         ],
         [
-            'label'   => 'Strategy + execution alignment',
-            'values'  => ['Inconsistent', 'Fragmented', 'Tightly aligned'],
-            'highlightIndex' => 2,
+            'label'   => 'Dedicated Account Manager',
+            'values'  => ['yes', 'no'],
         ],
         [
-            'label'   => 'Communication & reporting',
-            'values'  => ['Limited bandwidth', 'Surface-level', 'Proactive, insight-led'],
-            'highlightIndex' => 2,
+            'label'   => 'No Contract Lock-in',
+            'values'  => ['yes', 'no'],
         ],
         [
-            'label'   => 'Time to impact',
-            'values'  => ['Slow', 'Unclear', 'Structured 30/60/90‑day plan'],
-            'highlightIndex' => 2,
+            'label'   => 'Native English Writers',
+            'values'  => ['yes', 'no'],
+        ],
+        [
+            'label'   => 'Link Guarantee Policy',
+            'values'  => ['yes', 'no'],
         ],
     ],
 ];
 
 $stan_stats = [
     [
-        'value' => '250+',
-        'label' => 'Active SEO engagements',
+        'value' => '120k+',
+        'label' => 'Links Delivered',
     ],
     [
-        'value' => '30%',
-        'label' => 'Avg. MoM organic growth',
+        'value' => '98%',
+        'label' => 'Client Retention',
     ],
     [
-        'value' => '15',
-        'label' => 'Countries served',
+        'value' => '3.2M',
+        'label' => 'Keywords Improved',
     ],
+];
+
+$stan_trust_logos = [
+    [
+        'label' => 'Rise Authority',
+        'src'   => 'assets/images/Frame 66.png',
+    ],
+    [
+        'label' => '1SEO',
+        'src'   => 'assets/images/Frame 62.png',
+    ],
+    [
+        'label' => 'Boostability',
+        'src'   => 'assets/images/Frame 63.png',
+    ],
+    [
+        'label' => 'ZenMedia',
+        'src'   => 'assets/images/Frame 64.png',
+    ],
+    [
+        'label' => 'Partner',
+        'src'   => 'assets/images/Frame 65.png',
+    ],
+    [
+        'label' => 'Partner2',
+        'src'   => 'assets/images/Frame 66.png',
+    ]
 ];
 

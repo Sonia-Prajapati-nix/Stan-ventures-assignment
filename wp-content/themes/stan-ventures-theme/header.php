@@ -15,11 +15,28 @@ if (!defined('ABSPATH')) {
 <header class="sv-site-header">
     <div class="sv-container sv-site-header__inner">
         <a href="<?php echo esc_url(home_url('/')); ?>" class="sv-site-header__logo">
-            <span class="sv-logo-mark">SV</span>
-            <span class="sv-logo-text">Stan Ventures</span>
+            <img
+                src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/logo-main.png'); ?>"
+                alt="<?php esc_attr_e('Stan Ventures', 'stan-ventures'); ?>"
+                class="sv-site-header__logo-img"
+            />
         </a>
 
-        <nav class="sv-site-header__nav" aria-label="<?php esc_attr_e('Primary menu', 'stan-ventures'); ?>">
+        <button
+            class="sv-header-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="sv-primary-menu"
+        >
+            <span class="sv-header-toggle__bar"></span>
+            <span class="sv-header-toggle__bar"></span>
+        </button>
+
+        <nav
+            class="sv-site-header__nav"
+            id="sv-primary-menu"
+            aria-label="<?php esc_attr_e('Primary menu', 'stan-ventures'); ?>"
+        >
             <?php
             wp_nav_menu([
                 'theme_location' => 'primary',
@@ -31,7 +48,7 @@ if (!defined('ABSPATH')) {
         </nav>
 
         <div class="sv-site-header__cta">
-            <a href="#contact" class="sv-btn sv-btn--primary">Book a strategy call</a>
+            <a href="#contact" class="sv-btn sv-btn--accent">Get a Proposal</a>
         </div>
     </div>
 </header>

@@ -50,5 +50,25 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.add('is-visible');
     });
   }
+
+  var header = document.querySelector('.sv-site-header');
+  var toggle = document.querySelector('.sv-header-toggle');
+  var nav = document.querySelector('.sv-site-header__nav');
+
+  if (header && toggle && nav) {
+    toggle.addEventListener('click', function () {
+      var isOpen = header.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (header.classList.contains('is-open')) {
+          header.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  }
 });
 

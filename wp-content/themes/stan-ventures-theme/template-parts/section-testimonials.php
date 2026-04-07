@@ -8,14 +8,19 @@ global $stan_testimonials;
 
 <section class="sv-section sv-testimonials" id="testimonials">
     <div class="sv-container">
-        <header class="sv-section__header">
+        <!-- <header class="sv-section__header">
             <p class="sv-eyebrow">Testimonials</p>
-            <h2 class="sv-section__title">Teams that trust Stan Ventures.</h2>
-        </header>
+            <h2 class="sv-section__title">What our partners say.</h2>
+        </header> -->
 
         <div class="sv-testimonials__grid">
             <?php foreach ($stan_testimonials as $testimonial) : ?>
                 <article class="sv-card sv-testimonial-card" data-animate="fade-up">
+                    <div class="sv-testimonial-card__stars" aria-hidden="true">
+                        <?php for ($i = 0; $i < 5; $i++) : ?>
+                            <span class="sv-testimonial-card__star"></span>
+                        <?php endfor; ?>
+                    </div>
                     <p class="sv-testimonial-card__quote">
                         <?php echo esc_html($testimonial['quote']); ?>
                     </p>
@@ -37,13 +42,13 @@ global $stan_testimonials;
                                 </p>
                             </div>
                         </div>
-                        <div class="sv-testimonial-card__logo">
+                        <!-- <div class="sv-testimonial-card__logo">
                             <img
                                 src="<?php echo esc_url(get_template_directory_uri() . '/' . $testimonial['companyLogo']); ?>"
                                 alt=""
                                 loading="lazy"
                             />
-                        </div>
+                        </div> -->
                     </div>
                 </article>
             <?php endforeach; ?>

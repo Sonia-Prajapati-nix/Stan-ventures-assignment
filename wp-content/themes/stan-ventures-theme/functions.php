@@ -21,9 +21,16 @@ add_action('wp_enqueue_scripts', function () {
     $theme_version = wp_get_theme()->get('Version');
 
     wp_enqueue_style(
+        'stan-ventures-fonts',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400&display=swap',
+        [],
+        null
+    );
+
+    wp_enqueue_style(
         'stan-ventures-main',
         get_template_directory_uri() . '/assets/css/main.css',
-        [],
+        ['stan-ventures-fonts'],
         $theme_version
     );
 

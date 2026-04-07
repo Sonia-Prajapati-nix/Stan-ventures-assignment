@@ -12,8 +12,7 @@ $rows    = $stan_comparison['rows'] ?? [];
 <section class="sv-section sv-comparison" id="comparison">
     <div class="sv-container">
         <header class="sv-section__header">
-            <p class="sv-eyebrow">Why Stan Ventures</p>
-            <h2 class="sv-section__title">How we compare to in‑house and generic agencies.</h2>
+            <h2 class="sv-section__title">Why Agencies Switch to Us</h2>
         </header>
 
         <div class="sv-comparison__table" role="table" aria-label="<?php esc_attr_e('SEO partner comparison', 'stan-ventures'); ?>">
@@ -23,7 +22,7 @@ $rows    = $stan_comparison['rows'] ?? [];
                 </div>
                 <?php foreach ($columns as $index => $columnLabel) : ?>
                     <div
-                        class="sv-comparison__cell sv-comparison__cell--col <?php echo $index === (count($columns) - 1) ? 'is-highlight' : ''; ?>"
+                        class="sv-comparison__cell sv-comparison__cell--col <?php echo $index === 0 ? 'is-highlight' : ''; ?>"
                         role="columnheader"
                     >
                         <?php echo esc_html($columnLabel); ?>
@@ -37,14 +36,14 @@ $rows    = $stan_comparison['rows'] ?? [];
                         <?php echo esc_html($row['label']); ?>
                     </div>
                     <?php foreach ($row['values'] as $index => $value) : ?>
-                        <?php
-                        $classes = ['sv-comparison__cell', 'sv-comparison__cell--col'];
-                        if (isset($row['highlightIndex']) && $index === $row['highlightIndex']) {
-                            $classes[] = 'is-highlight';
-                        }
-                        ?>
-                        <div class="<?php echo esc_attr(implode(' ', $classes)); ?>" role="cell">
-                            <?php echo esc_html($value); ?>
+                        <?php $is_yes = strtolower((string) $value) === 'yes'; ?>
+                        <div class="sv-comparison__cell sv-comparison__cell--col <?php echo $index === 0 ? 'is-highlight' : ''; ?>" role="cell">
+                            <span class="sv-comparison__icon <?php echo $is_yes ? 'is-yes' : 'is-no'; ?>" aria-hidden="true">
+                                <?php echo $is_yes ? '✓' : '✕'; ?>
+                            </span>
+                            <span class="screen-reader-text">
+                                <?php echo $is_yes ? esc_html__('Yes', 'stan-ventures') : esc_html__('No', 'stan-ventures'); ?>
+                            </span>
                         </div>
                     <?php endforeach; ?>
                 </div>
